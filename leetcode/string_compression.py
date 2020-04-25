@@ -1,4 +1,4 @@
-chars = ["a", "a", "c", "c", "c", "c", "c",
+chars = ["c", "c", "c", "c", "c",
          "c", "c", "c", "c", "c", "b", "b", "b"]
 # def compress(self, chars: List[str]) -> int:
 curr_char = chars[0]
