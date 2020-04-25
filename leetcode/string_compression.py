@@ -1,4 +1,5 @@
-chars = ["a", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "b", "b"]
+chars = ["a", "a", "c", "c", "c", "c", "c",
+         "c", "c", "c", "c", "c", "b", "b", "b"]
 # def compress(self, chars: List[str]) -> int:
 curr_char = chars[0]
 count = 0
@@ -18,9 +19,17 @@ while i <= len(chars) - 1:
             chars.pop(i)
             continue
         else:
-            chars[i] = str(count)
+            count_len = len(str(count))
+            str_count = str(count)
+            if count > 9:
+                chars.pop(i)
+                chars[i:i] = list(str_count)
+            else:
+                chars[i] = str(count)
             count = 0
-            curr_char = chars[i + 1]
+            curr_char = chars[i + count_len]
+            i += count_len
+            continue
     elif chars[i] != curr_char and i < len(chars) - 2:
         curr_char = chars[i+1]
         count = 0
