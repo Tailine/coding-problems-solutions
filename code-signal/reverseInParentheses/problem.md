@@ -2,7 +2,7 @@ Write a function that reverses characters in (possibly nested) parentheses in th
 
 Input strings will always be well-formed with matching ()s.
 
-## Example
+### Example
 
 - For inputString = "(bar)", the output should be
   reverseInParentheses(inputString) = "rab";
