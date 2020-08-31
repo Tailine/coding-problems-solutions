@@ -5,7 +5,6 @@ def arrayChange(inputArray):
             increase = inputArray[i] - inputArray[i+1] + 1
             inputArray[i+1] = increase + inputArray[i+1]
             moves = moves + increase
-    print(moves)
 
 
 arrayChange([-1000, 0, -2, 0])
